@@ -1,0 +1,30 @@
+发现个问题，新的hexo项目clone下来后，第一次部署图片会是相对当前文件名的目录的路径而不是相对网址，不知道是hexo的问题，还是npm缓存，还是next主题问题。再部署一次就行了，很奇怪
+
+git clone ssh://git@localhost:8022/storage/emulated/0/000Ly/git/server/blog.source.git
+git clone ssh://git@192.168.1.101:8022/storage/emulated/0/000Ly/git/server/blog.source.git
+
+git remote set-url origin-k40s ssh://git@localhost:8022/storage/emulated/0/000ly/git/server/termux_test
+
+git remote set-url origin ssh://git@localhost:8022/storage/emulated/0/000ly/git/server/blog.source.git
+git remote add origin git@github.com:lwmfjc/blog.source.git
+
+git remote rm origin #删除
+
+git remote -v #当前分支
+
+git remote add origin-k40s ssh://git@localhost:8022/storage/emulated/0/000ly/git/server/blog.source.git
+
+git remote add origin-github git@github.com:lwmfjc/blog.source.git
+
+
+git remote set-url origin ssh://git@localhost:8022/storage/emulated/0/000ly/git/server/blog.source.git
+git pull origin main #先从手机上更新
+git remote set-url origin git@github.com:lwmfjc/blog.source.git #再从远程更新
+git add .
+git commit -m 'k40s commit'
+git push origin main #推送到远程
+git remote set-url origin ssh://git@localhost:8022/storage/emulated/0/000ly/git/server/blog.source.git
+
+
+cd /data/data/com.termux/files/home/file-github
+cd /storage/emulated/0/000Ly/git 
