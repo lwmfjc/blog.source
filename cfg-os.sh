@@ -16,6 +16,7 @@ if [ $x == "pcc" ] ; then
     tar -cvf pc-cfg-obsidian-source.tar source/.obsidian
 elif [ $x == "pcx" ] ; then 
     echo "pcx1"
+    rm -rf source/.obsidian
     #解压pc上的source的obsidian配置
     tar -xvf pc-cfg-obsidian-source.tar source/.obsidian
 elif [ $x == "mbc" ] ; then 
@@ -24,6 +25,7 @@ elif [ $x == "mbc" ] ; then
     tar -cvf mb-cfg-obsidian-source.tar source/.obsidian
 elif [ $x == "mbx" ] ; then 
     echo "mbx1"
+    rm -rf source/.obsidian
     #解压mobile上的source的obsidian配置
     tar -xvf mb-cfg-obsidian-source.tar source/.obsidian
 fi
