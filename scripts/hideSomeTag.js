@@ -19,7 +19,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
         function (match_str) {
             //\1是回溯引用，第一个括号匹配到的内容
             // \\双斜杠表示匹配\开头，即相对路径
-            if (match_str.search(/src\s*=\s*(['"])[/\\].+\.pdf\s*\1/g)) {
+            if (match_str.search(/src\s*=\s*(['"])[/\\].+\.pdf\s*\1/g)!==-1) {
                 return "";
             } else {
                 return match_str;
@@ -29,16 +29,26 @@ hexo.extend.filter.register('before_post_render', function (data) {
     <a  href="/myjs/pdfjs/web/viewer.html?file=/attachments/pdf/hello.pdf" target="_blank">第九回 齐侯送文姜婚鲁 祝聃射周王中肩</a>
      */
     //忽略链接打开本地pdf的渲染
-     data.content = data.content.replace(/<a.*a>/g,
-         function (match_str) {
-             //\1是回溯引用，第一个括号匹配到的内容
-             // \\双斜杠表示匹配\开头，即相对路径
-             if (match_str.search(/href\s*=\s*(['"])[/\\].+\.pdf\s*\1/g)) {
-                 return "";
-             } else {
-                 return match_str;
-             }
-         });
+    data.content = data.content.replace(/<a.*a>/g,
+        function (match_str) {
+            //\1是回溯引用，第一个括号匹配到的内容
+            // \\双斜杠表示匹配\开头，即相对路径
+            if (match_str.search(/href\s*=\s*(['"])[/\\].+\.pdf\s*\1/g)!==-1) {
+                return "";
+            } else {
+                return match_str;
+            }
+        });
+    //忽略excalidraw链接
+    data.content = data.content.replace(/%%.*%%/g,
+        function (match_str) {
+            if(match_str.includes("Excalidraw")){
+                console.debug(match_str+"----------------------------------------------------------------------");
+            }
+            //\1是回溯引用，第一个括号匹配到的内容
+            // \\双斜杠表示匹配\开头，即相对路径
+            return "";
+        });
     return data;
 });
 /*
