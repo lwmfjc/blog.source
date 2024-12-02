@@ -6,15 +6,9 @@ hexo.extend.filter.register('before_post_render', function (data) {
     /**
      * pdf的img渲染
      * ![ly-pdf](attachments/book/横格中.pdf)
+     * 下面这个正则前半部分从别人那里烤来的，有点复杂，先这样。简单点的也能用，先用他这个复杂的，目前看不懂啥意思
      */
-    data.content = data.content.replace(/!{1}\[([^\[\]]*)\]\((.*)\s?(?:".*")?\)/g,
-        function (match_str) {
-            if (/(.pdf.*\))$/g.test(match_str)) {
-                return "";
-            } else {
-                return match_str;
-            }
-        });
+    data.content = data.content.replace(/!{1}\[([^\[\]]*)\]\(.+.pdf.*\)?\)/g,"");
     /**
      * 忽略iframe链接打开本地pdf的渲染
      *<iframe src='/myjs/pdfjs/web/viewer.html?file=/attachments/hello.pdf' marginwidth ="0" frameborder="no" scrolling="no"  style="padding: 0;width:100%;height: 0px;width: 0px;"></iframe>
