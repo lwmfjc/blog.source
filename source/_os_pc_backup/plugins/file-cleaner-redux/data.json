@@ -1,0 +1,14 @@
+{
+  "deletionDestination": "system",
+  "obsidianTrashCleanupAge": -1,
+  "excludeInclude": 1,
+  "excludedFolders": [
+    "attachments/img"
+  ],
+  "attachmentsExcludeInclude": 1,
+  "attachmentExtensions": [],
+  "deletionConfirmation": true,
+  "runOnStartup": false,
+  "removeFolders": false,
+  "ignoredFrontmatter": []
+}
