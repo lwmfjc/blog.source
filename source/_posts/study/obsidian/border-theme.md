@@ -1,11 +1,13 @@
 ---
-title: 啦啦啦
-description: 
-categories: 
-tags: 
+title: border-theme背景图片问题
+description: border-theme背景图片问题
+categories:
+  - 学习
+tags:
+  - obsidian
 published: true
-date: 2024-12-04 07:58:33 星期三
-updated: 2024-12-04 07:58:33 星期三
+date: 2024-12-04 09:10:11 星期三
+updated: 2024-12-04 09:10:11 星期三
 ---
 以下面这张图片为例  
    ![](attachments/img/ly-20241204075546054.svg)
