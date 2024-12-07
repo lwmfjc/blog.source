@@ -44,4 +44,5 @@ background中貌似存在转换规则，不是直接用url("")这个形式把图
 %2c ,
 ```
 后续见另一篇文章   
+[border-theme](_posts/study/obsidian/border-theme.md)
 {% post_link 'study/obsidian/border-theme' 'helo' %}
