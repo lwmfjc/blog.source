@@ -84,4 +84,11 @@ author: "Mike"
   ![](attachments/img/ly-20241207223540672.png)  
   如果`hugo new dir1/c.md`时archetypes/dir1.md不存在，则才会去找```archetypes/default.md```当模板创建文件
 # shortcodes 短代码
-  
+## 代码
+放到markdown文件中（这个youtube是官方支持的内嵌的）
+```markdown
+{{< youtube w7Ft2ymGmfc >}}
+```
+## 效果  
+![](attachments/img/ly-20241207231024348.png)  
+# taxonomies（分类法）
