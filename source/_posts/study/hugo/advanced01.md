@@ -1,6 +1,6 @@
 ---
-title: hugo进阶学习
-description: hugo进阶学习
+title: hugo进阶学习01
+description: hugo进阶学习01
 categories:
   - 学习
 tags:
@@ -12,7 +12,7 @@ updated: 2024-12-07 21:18:20 星期六
 # 介绍
 - hugo是用来构建静态网站的
 - 但是也可以稍微做点动态生成的事
-- 这里使用的版本是v0.26（很久之前的版本）
+- 这里使用的版本是**v0.26**（很久之前的版本）
 > 备注：标题**短代码**之前（不包括短代码这篇）的笔记是回溯的，所以没有复制源代码下来，直接在视频再次截图的
 # 在Windows上安装hugo
 - 到github release下载，然后放到某个文件夹中  
@@ -92,3 +92,71 @@ author: "Mike"
 ## 效果  
 ![](attachments/img/ly-20241207231024348.png)  
 # taxonomies（分类法）
+## 默认的两个分类
+比如修改了总共三个文件 （隐去其他前言数据） 
+```yaml
+---
+# a.md
+title: "A" 
+
+tags: ["tag1","tag2","tag3"]
+
+categories: ["cat1"]
+
+---
+# b.md
+---
+
+title: "B"
+
+tags: ["tag2" ]
+
+categories: ["cat2"]
+
+---
+# c.md
+---
+
+title: "C"
+
+tags: ["tag3"]
+
+categories: ["cat2"]
+
+---
+```
+效果：  
+![](attachments/img/ly-20241208111614218.png)  
+点击tag2时效果  
+![](attachments/img/ly-20241208111809062.png)  
+点击cat1时的效果  
+![](attachments/img/ly-20241208111825741.png)
+## 自定义分类
+```yaml
+# a.md添加最后一行，最后代码（忽略其他属性）
+---
+
+title: "A
+
+tags: ["tag1","tag2","tag3"]
+
+categories: ["cat1"]
+
+moods: ["Happy","Upbeat"]
+
+---
+```
+以及修改config.toml文件  
+```toml
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "ga-hugo-theme"
+[taxonomies] #添加这行及以下三行
+  tag = "tags"
+  category = "categories"
+  mood = "moods"
+```
+效果：  
+![](attachments/img/ly-20241208112054900.png)      
+
