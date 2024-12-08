@@ -65,15 +65,10 @@ theme = "ga-hugo-theme" #添加这句话
  archetypes/default.md  
 ``` toml
  ---
-
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-
 date: {{ .Date }}
-
 draft: true
-
 author: "Mike"
-
 ---
 ```
  使用命令行```hugo new b.md```结果  
@@ -98,31 +93,20 @@ author: "Mike"
 ---
 # a.md
 title: "A" 
-
 tags: ["tag1","tag2","tag3"]
-
 categories: ["cat1"]
-
 ---
 # b.md
 ---
-
 title: "B"
-
 tags: ["tag2" ]
-
 categories: ["cat2"]
-
 ---
 # c.md
 ---
-
 title: "C"
-
 tags: ["tag3"]
-
 categories: ["cat2"]
-
 ---
 ```
 效果：  
