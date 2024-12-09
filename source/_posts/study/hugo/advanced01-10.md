@@ -1,6 +1,6 @@
 ---
-title: hugo进阶学习01
-description: hugo进阶学习01
+title: hugo进阶学习01-10
+description: hugo进阶学习01-10
 categories:
   - 学习
 tags:

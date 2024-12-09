@@ -1,6 +1,6 @@
 ---
-title: hugo进阶学习02
-description: hugo进阶学习02
+title: hugo进阶学习11-15
+description: hugo进阶学习11-15
 categories:
   - 学习
 tags:
@@ -215,4 +215,45 @@ Home Page Template
 
 # Base Templates && Blocks Hugo
 
-a
+## 是什么
+BaseTemplate就是这个网站的总体模板
+## 案例
+### 目录结构
+![](attachments/img/ly-20241209211724506.png)  
+### 编辑文件
+baseof.html  
+``` html
+<!--layouts\_default\baseof.html-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--Hugo实体快，Block-->
+  {{ block "main" . }}
+    
+  {{end}}
+</body>
+</html>
+```
+
+single.html  
+**不要用html5的```<!----!>```注释，会出问题**  
+``` html
+{{ define "main" }}
+  This is the single template
+{{ end }} 
+```
+list.html
+```html
+{{/* layouts\_default\single.html */}}
+{{ define "main" }}
+     This is the listTemplate
+{{ end }} 
+```
+效果  
+![](attachments/img/ly-20241209234906571.png)  
+![](attachments/img/ly-20241209234923287.png)  
+
