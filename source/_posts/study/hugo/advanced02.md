@@ -70,26 +70,22 @@ This is the landing page for dir1
      {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
      {{.Content}}
      {{ range .Pages }}
-     <div style="border: 1px solid black; margin:10px; padding:10px; ">
-          <div style="font-size:20px;">
-               <a href="{{.URL}}">{{.Title}}</a>
-          </div>
-          <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-          <div style="color:grey; font-size:16px;">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a
-                    href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-          <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong> {{range
-               .Params.categories}}<a href="{{ " /categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-               {{end}}{{end}}</div>
-          <div style="color:grey; font-size:16px;">{{ if .Params.moods }}<strong>Moods:</strong> {{range
-               .Params.moods}}<a href="{{ " /moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+          <div style="border: 1px solid black; margin:10px; padding:10px; ">
+               <div style="font-size:20px;">
+                    <a href="{{.URL}}">{{.Title}}</a>
+               </div>
+               <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+               <div style="color:grey; font-size:16px;">{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
 
-          <p style="font-size:18px;">{{.Summary}}</p>
-     </div>
+               <p style="font-size:18px;">{{.Summary}}</p>
+          </div>
      {{ end }}
      {{ partial "footer" . }}
 </body>
-
 </html>
+
 ```
 ## 覆盖默认的list template
 编辑文件并保存  
@@ -147,7 +143,7 @@ list template简易版
 ```
 ## 改编
 ```html
-<!--D:\Users\ly\Documents\git\hugo\first_site\layouts\_default\single.html-->
+<!--layouts\_default\single.html-->
 <html>
 <head>
      <meta charset="UTF-8">
@@ -188,4 +184,35 @@ Home Page Template
 ![](attachments/img/ly-20241209172617434.png)  
 ## 目的
 不用理会a.md使用哪个当single template。而dir1文件夹下的所有md，都是用同一个single template。  
-目前content下所有md文件详情：a.md使用layouts/index.html当模板（没有的话则找layouts```/_default/index.html```当模板）。b.md和c.md、e.md、d.md、f.md均使用```layouts/_default/index.html```当模板
+目前content下所有md文件详情：a.md使用layouts/index.html当模板（没有的话则找layouts```/_default/index.html```当模板）。b.md和c.md、e.md、d.md、f.md均使用```layouts/_default/index.html```当模板  
+代码  
+``` html
+<!--layouts\dir1\single.html-->
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body> 
+  Dir1Template,see!
+  <h1>Header</h1>
+  <h3>{{.Title}}</h3>
+  <h4>{{.Date}}</h4> <!--特殊项-->
+  {{.Content}}
+  <h1>Footer</h1>
+</body>
+</html>
+```
+## 结果
+![](attachments/img/ly-20241209190702425.png)  
+
+![](attachments/img/ly-20241209190720396.png)  
+
+其他的走默认模板  ```layouts\_default\single.html```  
+![](attachments/img/ly-20241209190743446.png)  
+
+# Base Templates && Blocks Hugo
+
+a
