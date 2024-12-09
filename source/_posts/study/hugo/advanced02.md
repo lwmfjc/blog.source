@@ -120,3 +120,72 @@ list template简易版
 
 ![](attachments/img/ly-20241208182033315.png)  
 # single template
+## 当前效果  
+![](attachments/img/ly-20241209143458788.png)  
+## 主题默认代码
+``` html
+<!-- themes\ga-hugo-theme\layouts\_default\single.html -->
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     {{ partial "header" (dict "Kind" .Kind "Template" "Single") }}
+     <p>Test test</p>
+     <div style="margin:25px;">
+          <h1>{{.Title}}</h1>
+          <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+          <div style="color:grey; font-size:16px;">{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+          <div style="font-size:18px;">{{.Content}}</div>
+     </div>
+     {{ partial "footer" . }}
+</body>
+</html>
+```
+## 改编
+```html
+<!--D:\Users\ly\Documents\git\hugo\first_site\layouts\_default\single.html-->
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body> 
+  <h1>Header</h1>
+  <h3>{{.Title}}</h3>
+  <h4>{{.Date}}</h4> <!--特殊项-->
+  {{.Content}}
+  <h1>Footer</h1>
+</body>
+</html>
+```
+效果  
+![](attachments/img/ly-20241209143751946.png)  
+# home template
+## 是什么
+- 前面学到，页面分为“列表页面list page”和“单页页面”。其实再细分还有一种“主页页面home page”。
+- 主页，即 ```localhost:1313``` 是先使用homepage，找不到的情况，才会使用list page
+## 目录结构
+![](attachments/img/ly-20241209172617434.png)  
+## 当前效果
+
+![](attachments/img/ly-20241209172955608.png)  
+## 修改文件代码
+```html
+<!--layouts\index.html-->
+Home Page Template
+```
+![](attachments/img/ly-20241209173301572.png)  
+## 效果
+![](attachments/img/ly-20241209173414623.png)  
+# SectionTemplate
+## 当前目录结构
+![](attachments/img/ly-20241209172617434.png)  
+## 目的
+不用理会a.md使用哪个当single template。而dir1文件夹下的所有md，都是用同一个single template。  
+目前content下所有md文件详情：a.md使用layouts/index.html当模板（没有的话则找layouts```/_default/index.html```当模板）。b.md和c.md、e.md、d.md、f.md均使用```layouts/_default/index.html```当模板
