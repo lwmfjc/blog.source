@@ -1,6 +1,6 @@
 ---
-title: hugo进阶学习17-20
-description: hugo进阶学习17-20
+title: hugo进阶学习17-19
+description: hugo进阶学习17-19
 categories:
   - 学习
 tags:
@@ -220,6 +220,7 @@ list.html
 <body> 
   
 {{ $title := .Title }}
+{{/* 注意，这里遍历的是整个网站(.Site)的文件 */}}
 {{ range .Site.Pages }}
    <a href="{{.URL}}" style=" {{ if eq .Title $title }} background-color: red; {{ end }} ">{{.Title}}</a> 
 {{ end }}
