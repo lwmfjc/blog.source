@@ -4,65 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "705632c9aaf3ba0f",
+        "id": "b0d2fa032e2eb029",
         "type": "tabs",
         "children": [
           {
-            "id": "ad466d2acf027fe2",
+            "id": "a865bc300a6dd253",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/study/flowable/offical/04.md",
+                "file": "_posts/study/hugo/GiraffeAcademy/advanced20-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04"
-            }
-          },
-          {
-            "id": "44117984a67dce3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/test/rsync-use.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "rsync-use"
-            }
-          },
-          {
-            "id": "be730df8d37cb101",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/test/未命名.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "未命名"
-            }
-          },
-          {
-            "id": "7802988b0911ba61",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "attachments/img/ecd-20241203102236274.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "ecd-20241203102236274"
+              "title": "advanced20-23"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,27 +52,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "attachments/img/ecd-20241203102236274.md"
+                "file": "_posts/study/hugo/GiraffeAcademy/advanced20-23.md"
               },
               "icon": "lucide-list",
-              "title": "ecd-20241203102236274 的大纲"
-            }
-          },
-          {
-            "id": "9ca3c51061bde548",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "tag:复习-javaGuide",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
+              "title": "advanced20-23 的大纲"
             }
           },
           {
@@ -125,12 +67,29 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "4e4496d5d07102e3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 200
   },
   "right": {
     "id": "2973a3bcaa4709b2",
@@ -146,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/content-pdf.md",
+                "file": "_posts/study/mysql/bl_sgg/96-00.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "content-pdf 的反向链接列表"
+              "title": "96-00 的反向链接列表"
             }
           },
           {
@@ -165,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/content-pdf.md",
+                "file": "_posts/study/hugo/advanced02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "content-pdf 的出链列表"
+              "title": "advanced02 的出链列表"
             }
           },
           {
@@ -201,7 +160,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,54 +179,53 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "7802988b0911ba61",
+  "active": "a865bc300a6dd253",
   "lastOpenFiles": [
-    "_posts/test/未命名.md",
-    "_posts/test/rsync-use.md",
-    "attachments/img/ecd-20241203102236274.md",
-    "attachments/img/ecd-20241203102236274.svg",
-    "_posts/gitempty.md",
+    "_posts/study/hugo/GiraffeAcademy/advanced17-19.md",
+    "_posts/study/hugo/GiraffeAcademy/advanced20-23.md",
+    "_posts/study/hugo/GiraffeAcademy/advanced20-23.zip",
+    "_posts/study/hugo/GiraffeAcademy/advanced11-16.md",
+    "_posts/study/hugo/GiraffeAcademy/advanced01-10.md",
+    "_posts/study/hugo/GiraffeAcademy/GiraffeAcademy.zip",
+    "attachments/img/ly-20241210230506325.png",
+    "_posts/study/redis/shangguigu_BV1Rv41177Af/06-11.md",
+    "attachments/img/ecd-20241210202057985.md",
+    "attachments/img/ecd-20241210202057985.svg",
+    "_posts/study/obsidian/obsidian-theme.md",
+    "_posts/study/obsidian/border-theme.md",
+    "_posts/study/mybatis_plus/bl_sgg/19-39.md",
+    "_posts/study/mybatis_plus/bl_sgg/12-18.md",
+    "_posts/study/mybatis_plus/bl_sgg/01-11.md",
+    "_posts/study/mybatis_plus/bl_sgg/40-57.md",
     "_posts/test/pdf-test.md",
+    "attachments/img/ly-20241210144448146.png",
+    "attachments/img/ly-20241210151744421.png",
+    "attachments/img/ly-20241210151809812.png",
+    "_posts/test/rsync-use.md",
+    "_posts/study/mysql/how_mysql_run/14.md",
+    "_posts/study/mysql/how_mysql_run/01.md",
+    "_posts/study/redis/shangguigu_BV1Rv41177Af/18.md",
+    "_posts/study/redis/shangguigu_BV1Rv41177Af/19-A.md",
+    "attachments/img/ly-20241210175221253.png",
+    "_posts/study/redis/shangguigu_BV1Rv41177Af/01-05.md",
+    "_posts/study/redis/shangguigu_BV1Rv41177Af/12-17.md",
+    "_posts/study/redis/redis-cluster.md",
+    "attachments/img/ly-20241210173108285.png",
+    "attachments/img/ly-20241210170803404.png",
+    "attachments/img/ly-20241210165423667.png",
+    "attachments/img/ly-20241210164617330.png",
+    "_posts/study/hugo/GiraffeAcademy",
+    "_posts/study/hugo/advance/未命名.md",
+    "_posts/study/hugo/advance",
+    "_posts/study/linux/base/base.md",
+    "attachments/img/ExcalidrawStartup.md",
+    "_posts/test/未命名.md",
+    "_posts/study/hugo",
+    "attachments/resource",
+    "attachments/新建文件夹",
+    "_posts/study/obsidian",
     "attachments/book/work/c/c语言程序设计K_R/第6章 结构.pdf",
-    "_posts/study/flowable/offical/04.md",
-    "attachments/img/ecd-20241202113023866.svg",
-    "attachments/img/ecd-20241202113023866.md",
-    "_posts/study/flowable/offical/03.md",
-    "_posts/study/flowable/offical/05.md",
     "attachments/book/work/c/c语言程序设计K_R/附录 A 参考手册.pdf",
-    "_posts/problem/other/01.md",
-    "_posts/problem/idea/01.md",
-    "attachments/book/work/linux/linux就该这么学/第8章 iptables与filewalld防火墙.pdf",
-    "_posts/test/Untitled.md",
-    "attachments/book/work/c/c语言程序设计K_R/第3章 流控制.pdf",
-    "templates/content-pdf.md",
-    "attachments/book/work/c/c语言程序设计K_R/附录 B 标准库.pdf",
-    "_posts/problem/linux/20230919.md",
-    "_posts/problem/linux/20230817.md",
-    "_posts/problem/linux/20230815.md",
-    "attachments/book/tradition/曾仕强 情绪管理/引言.pdf",
-    "_posts/review/java_guide/database/mysql/ly0604lyinnodb-implementation-of-mvcc.md",
-    "attachments/img/ecd-20241203091232142.md",
-    "attachments/img/ecd-20241203091232192.md",
-    "attachments/img/ecd-20241203091232192.svg",
-    "attachments/img/ecd-20241203091110684.md",
-    "attachments/img/ecd-20241203091110684.svg",
-    "_posts/problem/linux/20230819.md",
-    "_posts/review/java_guide/database/mysql/ly0605lyhow-sql-executed-in-mysql.md",
-    "_posts/review/java_guide/database/mysql/ly0608lysome-thoughts-on-database-storage-time.md",
-    "_posts/review/java_guide/database/mysql/ly0603lytransaction-isolation-level.md",
-    "_posts/problem/git/01.md",
-    "_posts/life/20231021.md",
-    "attachments/img/ly-20241129104120165.png",
-    "attachments/img/ly-20241129104132305.png",
-    "attachments/img/ly-20241129104134100.png",
-    "attachments/img/ly-20241129104134426.png",
-    "attachments/img/ecd-20241202111753921.svg",
-    "attachments/img/20241202111622701.svg",
-    "attachments/excalidraw/fontAsset/新建文本文档.txt",
-    "attachments/excalidraw/fontAsset/Xiaolai-Regular-f8ee5d36068a42b51d0e4a1116cfcec1.woff2",
-    "attachments/excalidraw/fontAsset/Xiaolai-Regular-f6032fc06eb20480f096199713f70885.woff2",
-    "attachments/excalidraw/fontAsset/Xiaolai-Regular-f5d079153c99a25b9be5b8583c4cc8a7.woff2",
     "attachments/excalidraw/未命名.canvas"
   ]
 }

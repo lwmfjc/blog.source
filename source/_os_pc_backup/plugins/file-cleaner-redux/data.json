@@ -5,7 +5,7 @@
   "excludedFolders": [
     "attachments/img"
   ],
-  "attachmentsExcludeInclude": 1,
+  "attachmentsExcludeInclude": 0,
   "attachmentExtensions": [],
   "deletionConfirmation": true,
   "runOnStartup": false,

@@ -11,6 +11,9 @@ updated: 2024-12-07 21:18:20 星期六
 ---
 > 系列视频地址介绍  
 > https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
+
+![](attachments/img/ly-20241211002918095.png)  
+
 # 介绍
 - hugo是用来构建静态网站的
 - 但是也可以稍微做点动态生成的事
@@ -65,13 +68,15 @@ theme = "ga-hugo-theme" #添加这句话
 # archetypes（原型）
 ## 默认的原型文件
  archetypes/default.md  
-``` toml
+``` toml    
+{% raw %} 
  ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 author: "Mike"
----
+---  
+{% endraw %} 
 ```
  使用命令行```hugo new b.md```结果  
  ![](attachments/img/ly-20241207222919359.png)  
@@ -83,15 +88,18 @@ author: "Mike"
 # shortcodes 短代码
 ## 代码
 放到markdown文件中（这个youtube是官方支持的内嵌的）
-```markdown
-{{< youtube w7Ft2ymGmfc >}}
+```markdown 
+{% raw %} 
+{{< youtube w7Ft2ymGmfc >}} 
+{% endraw %} 
 ```
 ## 效果  
 ![](attachments/img/ly-20241207231024348.png)  
 # taxonomies（分类法）
 ## 默认的两个分类
 比如修改了总共三个文件 （隐去其他前言数据） 
-```yaml
+```yaml    
+{% raw %} 
 ---
 # a.md
 title: "A" 
@@ -109,7 +117,8 @@ categories: ["cat2"]
 title: "C"
 tags: ["tag3"]
 categories: ["cat2"]
----
+---   
+{% endraw %} 
 ```
 效果：  
 ![](attachments/img/ly-20241208111614218.png)  
@@ -118,7 +127,8 @@ categories: ["cat2"]
 点击cat1时的效果  
 ![](attachments/img/ly-20241208111825741.png)
 ## 自定义分类
-```yaml
+```yaml  
+{% raw %} 
 # a.md添加最后一行，最后代码（忽略其他属性）
 ---
 
@@ -130,10 +140,12 @@ categories: ["cat1"]
 
 moods: ["Happy","Upbeat"]
 
----
+---  
+{% endraw %} 
 ```
 以及修改config.toml文件  
-```toml
+```toml  
+{% raw %} 
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
@@ -141,7 +153,8 @@ theme = "ga-hugo-theme"
 [taxonomies] #添加这行及以下三行
   tag = "tags"
   category = "categories"
-  mood = "moods"
+  mood = "moods"  
+{% endraw %} 
 ```
 效果：  
 ![](attachments/img/ly-20241208112054900.png)      

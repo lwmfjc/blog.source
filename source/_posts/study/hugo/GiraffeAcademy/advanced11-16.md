@@ -11,6 +11,8 @@ updated: 2024-12-08 11:23:42 星期日
 ---
 >这里使用的版本是**v0.26**（很久之前的版本）
 
+![](attachments/img/ly-20241211002948394.png)  
+
 # template basic
 模板分为list template和single template  
 ## 文件夹结构
@@ -55,7 +57,8 @@ This is the landing page for dir1
 ![](attachments/img/ly-20241208180907481.png)  
 
 ## 原因 
-```html
+```html 
+{% raw %} 
 <!--themes\ga-hugo-theme\layouts\_default\list.html-->
 <html>
 
@@ -84,12 +87,14 @@ This is the landing page for dir1
      {{ end }}
      {{ partial "footer" . }}
 </body>
-</html>
+</html> 
+{% endraw %} 
 
 ```
 ## 覆盖默认的list template
 编辑文件并保存  
-```html 
+```html  
+{% raw %} 
 <!--layouts\_default\list.html-->
 <html>
 <head>
@@ -108,7 +113,8 @@ This is the landing page for dir1
           </ul> 
      {{end}}
 </body>
-</html>
+</html> 
+{% endraw %} 
 ```
 ## 效果
 list template简易版  
@@ -119,7 +125,8 @@ list template简易版
 ## 当前效果  
 ![](attachments/img/ly-20241209143458788.png)  
 ## 主题默认代码
-``` html
+``` html 
+{% raw %} 
 <!-- themes\ga-hugo-theme\layouts\_default\single.html -->
 <html>
 <head>
@@ -139,10 +146,12 @@ list template简易版
      </div>
      {{ partial "footer" . }}
 </body>
-</html>
+</html> 
+{% endraw %} 
 ```
 ## 改编
-```html
+```html 
+{% raw %} 
 <!--layouts\_default\single.html-->
 <html>
 <head>
@@ -158,7 +167,8 @@ list template简易版
   {{.Content}}
   <h1>Footer</h1>
 </body>
-</html>
+</html> 
+{% endraw %} 
 ```
 效果  
 ![](attachments/img/ly-20241209143751946.png)  
@@ -172,9 +182,11 @@ list template简易版
 
 ![](attachments/img/ly-20241209172955608.png)  
 ## 修改文件代码
-```html
+```html 
+{% raw %} 
 <!--layouts\index.html-->
-Home Page Template
+Home Page Template 
+{% endraw %} 
 ```
 ![](attachments/img/ly-20241209173301572.png)  
 ## 效果
@@ -186,7 +198,8 @@ Home Page Template
 不用理会a.md使用哪个当single template。而dir1文件夹下的所有md，都是用同一个single template。  
 目前content下所有md文件详情：a.md使用layouts/index.html当模板（没有的话则找layouts```/_default/index.html```当模板）。b.md和c.md、e.md、d.md、f.md均使用```layouts/_default/index.html```当模板  
 代码  
-``` html
+``` html 
+{% raw %} 
 <!--layouts\dir1\single.html-->
 <html>
 <head>
@@ -203,7 +216,8 @@ Home Page Template
   {{.Content}}
   <h1>Footer</h1>
 </body>
-</html>
+</html>  
+{% endraw %} 
 ```
 ## 结果
 ![](attachments/img/ly-20241209190702425.png)  
@@ -222,7 +236,8 @@ BaseTemplate就是这个网站的总体模板
 ![](attachments/img/ly-20241209211724506.png)  
 ### 编辑文件
 baseof.html  
-``` html
+``` html 
+{% raw %} 
 <!--layouts\_default\baseof.html-->
 <html lang="en">
 <head>
@@ -236,22 +251,27 @@ baseof.html
     
   {{end}}
 </body>
-</html>
+</html> 
+{% endraw %} 
 ```
 
 single.html  
 **不要用html5的```<!----!>```注释，会出问题**  
-``` html
+``` html 
+{% raw %} 
 {{ define "main" }}
   This is the single template
-{{ end }} 
+{{ end }}  
+{% endraw %} 
 ```
 list.html
-```html
+```html 
+{% raw %} 
 {{/* layouts\_default\single.html */}}
 {{ define "main" }}
      This is the listTemplate
-{{ end }} 
+{{ end }}  
+{% endraw %} 
 ```
 效果  
 ![](attachments/img/ly-20241209234906571.png)  

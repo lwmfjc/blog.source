@@ -10,7 +10,7 @@
   "showInlineTitle": true,
   "showRibbon": true,
   "promptDelete": false,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,
