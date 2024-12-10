@@ -9,14 +9,11 @@ published: true
 date: 2024-12-09 23:50:43 星期一
 updated: 2024-12-09 23:50:43 星期一
 ---
-![](attachments/img/ly-20241211002940460.png)  
-
 # Variable
 ## 文件结构
 ![](attachments/img/ly-20241210141931324.png)  
 ## 实战
-```go 
-{% raw %} 
+```go
 {{/*layouts\_default\single.html*/}}
 {{ define "main" }}
   This is the single template<br>
@@ -30,12 +27,10 @@ updated: 2024-12-09 23:50:43 星期一
   {{ $myVarname := "aString" }}
   myVarname:{{ $myVarname }}<br>
   <h1 style="color: {{ .Params.color }} ;" >Single Template</h1>
-{{ end }}  
-{% endraw %} 
+{{ end }} 
 ```
 
-``` markdown 
-{% raw %} 
+``` markdown
 ---
 title: "E-title"
 date: 2024-12-07T12:43:21+08:00
@@ -44,15 +39,13 @@ myVar: "myvalue"
 color: "red"
 ---
 
-This is dir3/e.md 
-{% endraw %} 
+This is dir3/e.md
 ```
 
 ![](attachments/img/ly-20241210144019859.png)  
 
 其他两个文件效果  
-``` markdown 
-{% raw %} 
+``` markdown
 ---
 title: "F"
 date: 2024-12-07T12:43:21+08:00
@@ -60,14 +53,12 @@ draft: true
 color: "green"
 ---
 
-This is dir3/f.md 
-{% endraw %} 
+This is dir3/f.md
 ```
 
 ![](attachments/img/ly-20241210144426903.png)  
 
-``` markdown 
-{% raw %} 
+``` markdown
 ---
 title: "This is A's title"
 date: 2004-12-04T12:42:49+08:00
@@ -76,8 +67,7 @@ author: "Mike"
 color: "blue"
 ---
 
-This is A,/a. 
-{% endraw %} 
+This is A,/a.
 ```
 
 效果：  
@@ -94,8 +84,7 @@ This is A,/a.
 ## 代码(模板)
 注意，下面全是dir1下的模板，只对/dir1/及其下文件有效  
 baseof.html  
-```html 
-{% raw %} 
+```html
 {{/*layouts\_default\baseof.html*/}}
 <html lang="en">
 <head>
@@ -108,13 +97,11 @@ baseof.html
     33
   {{ end }}
 </body>
-</html> 
-{% endraw %} 
+</html>
 ```
 
 single.html  
-``` html 
-{% raw %} 
+``` html
 {{/*layouts\dir1\single.html*/}}
 <html>
 <head>
@@ -140,12 +127,10 @@ single.html
     {{ .Title }}<br>
   {{ end }}
 </body>
-</html> 
-{% endraw %} 
+</html>
 ```
 对于上面的single.html生成的html源码：  
-``` html 
-{% raw %} 
+``` html
 <html>
 <head>
      <meta charset="UTF-8">
@@ -169,15 +154,13 @@ single.html
   
   
 <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
-</html>  
-{% endraw %} 
+</html>
 ```
 
 ![](attachments/img/ly-20241210151809812.png)
 
 list.html  
-``` 
-{% raw %} 
+```
 {{/* layouts\dir1\list.html  */}}
 {{ define "main" }}
      This is the listTemplate for dir1;<br>
@@ -185,8 +168,7 @@ list.html
   {{ range .Pages }}
     {{ .Title }}<br>
   {{ end }}
-{{ end }}  
-{% endraw %} 
+{{ end }} 
 ```
 
 ![](attachments/img/ly-20241210151744421.png)  
@@ -196,8 +178,7 @@ list.html
 ![](attachments/img/ly-20241210141931324.png)  
 
 ## if代码演示
-```html 
-{% raw %} 
+```html
 {{/* layouts\_default\single.html */}}
 {{ define "main" }}
      This is the listTemplate<br>
@@ -221,15 +202,13 @@ list.html
           var5 is minist
      {{ end }}
      <br> 
-{{ end }}  
-{% endraw %} 
+{{ end }} 
 ```
 
 ![](attachments/img/ly-20241210153953444.png)  
 
 ## 其他代码展示
-``` html 
-{% raw %} 
+``` html
 <!--layouts\dir1\single.html-->
 <html>
 <head>
@@ -247,8 +226,7 @@ list.html
 {{ end }}
   <hr>
 </body>
-</html> 
-{% endraw %} 
+</html>
 ```
   
 ![](attachments/img/ly-20241210155405613.png)  

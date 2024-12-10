@@ -9,11 +9,9 @@ published: true
 date: 2024-12-10 15:54:58 星期二
 updated: 2024-12-10 16:06:47 星期二
 ---
-![](attachments/img/ly-20241211002925293.png)  
-
 # DateFiles
-```json  
-{% raw %} 
+```json
+
 {
   "classA":"json位置: data\\classes.json",
   "classA":{
@@ -28,61 +26,50 @@ updated: 2024-12-10 16:06:47 星期二
     "master":"BaoCeng",
     "number":"20"
   }
-}  
-{% endraw %} 
+}
 ```
 模板代码  
-``` html 
-{% raw %} 
+``` html
 {{/* layouts\_default\single.html */}}
 {{ define "main" }}
      {{ range .Site.Data.classes }}
           master:{{.master}}==number:{{.number}}<br>
      {{end}}
-{{end}} 
-{% endraw %} 
+{{end}}
 ```
 
 ![](attachments/img/ly-20241210164617330.png)  
 # PartialTemplates
 ## 传递全局范围
-``` html 
-{% raw %} 
+``` html
 {{/*layouts\partials\header.html*/}}
 <h1>{{.Title}}</h1>
-<p>{{.Date}}</p> 
-{% endraw %} 
+<p>{{.Date}}</p>
 ```
 
-```  
-{% raw %} 
+``` 
 {{/*layouts\_default\single.html*/}}
 {{ define "main" }}
   {{ partial "header" . }}
   {{/*点.传递了当前文件的范围，代表了所有的范围，所有可以访问的变量*/}}
   <hr>
-{{end}} 
-{% endraw %} 
+{{end}}
 ```
 预览：  
 ![](attachments/img/ly-20241210165423667.png)  
 
 ## 传递字典
-``` html 
-{% raw %} 
+``` html
 {{/* layouts\partials\header.html */}}
 {{ partial "header" (dict "myTitle" "myCustomTitle" "myDate" "myCustomDate" ) }}
 {{/* partial "header" . 同一个partial只能在一个地方出现一次？这里会报错，不知道为啥*/}}
-  <hr> 
-{% endraw %} 
+  <hr>
 ```
 使用:  
-``` html 
-{% raw %} 
+``` html
 {{/*layouts\partials\header.html*/}}
 <h1>{{.myTitle}}</h1>
-<p>{{.myDate}}</p> 
-{% endraw %} 
+<p>{{.myDate}}</p>
 ```
 
 效果：  
@@ -91,10 +78,9 @@ updated: 2024-12-10 16:06:47 星期二
 # ShortCodeTemplate
 ## 效果图
 ![](attachments/img/ly-20241210173108285.png)  
-## 记得先在a相关的template把 .Content 补上
+## 记得先在a相关的template把```{{.Content}}```补上
 ## 代码片段的使用
-``` markdown 
-{% raw %} 
+``` markdown
 ---
 title: "This is A's title"
 date: 2004-12-04T12:42:49+08:00
@@ -123,30 +109,23 @@ This is A.
 
 {{% myshortcode-p %}}
   **bold text**xxx
-{{% /myshortcode-p %}} 
-{% endraw %} 
+{{% /myshortcode-p %}}
 ```
 ## 代码片段的编写
 ### 等号键值对
-``` html 
-{% raw %} 
+``` html
 <!--layouts\shortcodes\myshortcode.html-->
-<p style="color:{{.Get `color`}}">This is my shortcode text</p> 
-{% endraw %} 
+<p style="color:{{.Get `color`}}">This is my shortcode text</p>
 ```
 ### 直接写值
-``` html 
-{% raw %} 
+``` html
 <!--layouts\shortcodes\myshortcode2.html-->
-<p style="color:{{.Get 0}}">This is my shortcode text</p> 
-{% endraw %} 
+<p style="color:{{.Get 0}}">This is my shortcode text</p>
 ```
 ### 获取多行大量文字
-``` html 
-{% raw %} 
+``` html
 <!--layouts\shortcodes\myshortcode-p.html-->
-<p style="background-color: yellow;">{{.Inner}}</p> 
-{% endraw %} 
+<p style="background-color: yellow;">{{.Inner}}</p>
 ```
 
 # 如何构建网站及托管
