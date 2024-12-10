@@ -9,6 +9,8 @@ published: true
 date: 2024-12-07 21:17:37 星期六
 updated: 2024-12-07 21:18:20 星期六
 ---
+> 系列视频地址介绍  
+> https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
 # 介绍
 - hugo是用来构建静态网站的
 - 但是也可以稍微做点动态生成的事
