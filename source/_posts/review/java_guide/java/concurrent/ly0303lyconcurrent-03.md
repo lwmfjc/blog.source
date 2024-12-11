@@ -70,7 +70,7 @@ updated: 2022-11-21 10:54:33
   - Runnable接口不会返回结果或抛出检查异常，Callable接口可以
 
   - Executors可以实现将Runnable对象转换成Callable对象  
-    Executors.callable(Runnable task)` 或 `Executors.callable(Runnable task, Object result)  //则两个方法，运行的结果是 Callable<Object>   
+    Executors.callable(Runnable task)` 或 `Executors.callable(Runnable task, Object result)  //则两个方法，运行的结果是 ```Callable<Object>```   
     
     ```java
     //一个不指定结果，另一个指定结果  

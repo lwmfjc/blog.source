@@ -38,7 +38,7 @@ Future接口有5个方法：
 
 ![img](attachments/img/ly-20241129104410892.png)
 
-CompletionStage<T> 接口中的方法比较多，CompoletableFuture的函数式能力就是这个接口赋予的，大量使用**Java8引入的函数式编程**
+```CompletionStage<T> ```接口中的方法比较多，CompoletableFuture的函数式能力就是这个接口赋予的，大量使用**Java8引入的函数式编程**
 
 # 常见操作
 
@@ -49,7 +49,7 @@ CompletionStage<T> 接口中的方法比较多，CompoletableFuture的函数式�
 1. 通过new关键字
    这个方式，可以看作是将**CompletableFuture当作Future**来使用，如下：  
 
-   > 我们通过创建了一个结果值类型为 `RpcResponse<Object>` 的 `CompletableFuture`，你可以把 `resultFuture` 看作是异步运算结果的载体
+   > 我们通过创建了一个结果值类型为 ```RpcResponse<Object>``` 的 `CompletableFuture`，你可以把 `resultFuture` 看作是异步运算结果的载体
    >
    > ```java
    > CompletableFuture<RpcResponse<Object>> resultFuture = new CompletableFuture<>();
@@ -73,26 +73,26 @@ CompletionStage<T> 接口中的方法比较多，CompoletableFuture的函数式�
    获取异步结果，使用get() ，调用get()方法的线程会阻塞 直到CompletableFuture完成运算：
    ```rpcResponse = completableFuture.get();```
 
-   ```java
-public class CompletableFutureTest {
-       public static void main(String[] args) throws ExecutionException, InterruptedException {
+```java
+    public class CompletableFutureTest {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
            /*CompletableFuture<Object> resultFuture=new CompletableFuture<>();
            resultFuture.complete("hello world");
            System.out.println(resultFuture.get());*/
-           CompletableFuture<String> stringCompletableFuture = CompletableFuture.supplyAsync(() -> {
-               try {
-                   TimeUnit.SECONDS.sleep(3);
-               } catch (InterruptedException e) {
+        CompletableFuture<String> stringCompletableFuture = CompletableFuture.supplyAsync(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(3);
+            } catch (InterruptedException e) {
                 e.printStackTrace();
-               }
-               return "hello,world!";
-           });
-           System.out.println("被阻塞啦----");
-           String s = stringCompletableFuture.get();
-           System.out.println("结果---"+s); 
-       }
-   }
-   ```
+            }
+            return "hello,world!";
+        });
+        System.out.println("被阻塞啦----");
+        String s = stringCompletableFuture.get();
+        System.out.println("结果---"+s);
+    }
+}
+``` 
    
    
    
@@ -102,8 +102,8 @@ public class CompletableFutureTest {
    CompletableFuture<String> future = CompletableFuture.completedFuture("hello!");
    assertEquals("hello!", future.get()); 
    //completedFuture() 方法底层调用的是带参数的 new 方法，只不过，这个方法不对外暴露。
-   public static <U> CompletableFuture<U> completedFuture(U value) {
-       return new CompletableFuture<U>((value == null) ? NIL : value);
+   public static  CompletableFuture completedFuture(U value) {
+       return new CompletableFuture((value == null) ? NIL : value);
    } 
    ```
    
@@ -114,9 +114,9 @@ public class CompletableFutureTest {
    这两个方法可以帮助我们封装计算逻辑
 
    ```java
-   static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier);
+   static  CompletableFuture supplyAsync(Supplier supplier);
    // 使用自定义线程池(推荐)
-   static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier, Executor executor);
+   static  CompletableFuture supplyAsync(Supplier supplier, Executor executor);
    static CompletableFuture<Void> runAsync(Runnable runnable);
    // 使用自定义线程池(推荐)
 static CompletableFuture<Void> runAsync(Runnable runnable, Executor executor);
@@ -204,22 +204,23 @@ public class CompletableFutureTest {
      }
      ```
    
-   - `supplyAsync()` 方法接受的参数是 `Supplier<U>` ，这也是一个函数式接口，**`U` 是返回结果值的类型**。
+   - `supplyAsync()` 方法接受的参数是 `Supplier` ，这也是一个函数式接口，**`U` 是返回结果值的类型**。  
+
+```java
+    @FunctionalInterface
+public interface Supplier<T> {
+
+    /**
+     * Gets a result.
+     *
+     * @return a result
+     */
+    T get();
+}
+``` 
+
    
-     ```java
-     @FunctionalInterface
-     public interface Supplier<T> {
-     
-         /**
-          * Gets a result.
-          *
-          * @return a result
-          */
-         T get();
-     } 
-     ```
-   
-     当需要异步操作且关心返回的结果时，可以使用supplyAsync()方法
+当需要异步操作且关心返回的结果时，可以使用supplyAsync()方法
    
      ```java
      CompletableFuture<Void> future = CompletableFuture.runAsync(() -> System.out.println("hello!"));
@@ -289,24 +290,25 @@ INFO:阻塞结束啦
 
 1. thenApply()方法接受Function实例，用它来处理结果
 
-   ```java
-   // 沿用上一个任务的线程池
-   public <U> CompletableFuture<U> thenApply(
+```java
+// 沿用上一个任务的线程池
+   public  CompletableFuture thenApply(
        Function<? super T,? extends U> fn) {
        return uniApplyStage(null, fn);
    }
    
    //使用默认的 ForkJoinPool 线程池（不推荐）
-   public <U> CompletableFuture<U> thenApplyAsync(
+   public  CompletableFuture thenApplyAsync(
        Function<? super T,? extends U> fn) {
        return uniApplyStage(defaultExecutor(), fn);
    }
    // 使用自定义线程池(推荐)
-   public <U> CompletableFuture<U> thenApplyAsync(
+   public  CompletableFuture thenApplyAsync(
        Function<? super T,? extends U> fn, Executor executor) {
        return uniApplyStage(screenExecutor(executor), fn);
    } 
-   ```
+
+``` 
 
    使用示例：  
 
@@ -328,9 +330,8 @@ INFO:阻塞结束啦
    assertEquals("hello!world!nice!", future.get()); 
    ```
 
-2. 如果不需要从回调函数中返回结果，可以使用thenAccept()或者thenRun() ，两个方法区别在于thenRun()不能访问异步计算的结果(因为thenAccept方法的参数为 **Consumer<? super T>** )
-
-   ```java
+2. 如果不需要从回调函数中返回结果，可以使用thenAccept()或者thenRun() ，两个方法区别在于thenRun()不能访问异步计算的结果(因为thenAccept方法的参数为 ```Consumer<? super T>``` )
+```java 
    public CompletableFuture<Void> thenAccept(Consumer<? super T> action) {
        return uniAcceptStage(null, action);
    }
@@ -388,7 +389,7 @@ INFO:阻塞结束啦
            .thenApply(s -> s + "world!").thenApply(s -> s + "nice!").thenRun(() -> System.out.println("hello!"));//hello! 
    ```
 
-   whenComplete()的方法参数是BiConsumer<? super T , ? super Throwable >
+   whenComplete()的方法参数是```BiConsumer<? super T , ? super Throwable >```
 
    ```java
    public CompletableFuture<T> whenComplete(
@@ -447,17 +448,17 @@ INFO:阻塞结束啦
 使用handle（） 方法来处理任务执行过程中可能出现的抛出异常的情况
 
 ```java
-public <U> CompletableFuture<U> handle(
+public  CompletableFuture handle(
     BiFunction<? super T, Throwable, ? extends U> fn) {
     return uniHandleStage(null, fn);
 }
 
-public <U> CompletableFuture<U> handleAsync(
+public  CompletableFuture handleAsync(
     BiFunction<? super T, Throwable, ? extends U> fn) {
     return uniHandleStage(defaultExecutor(), fn);
 }
 
-public <U> CompletableFuture<U> handleAsync(
+public  CompletableFuture handleAsync(
     BiFunction<? super T, Throwable, ? extends U> fn, Executor executor) {
     return uniHandleStage(screenExecutor(executor), fn);
 } 
@@ -521,18 +522,18 @@ completableFuture.get(); // ExecutionException
 使用thenCompose() 按顺序连接两个CompletableFuture对象  
 
 ```java
-public <U> CompletableFuture<U> thenCompose(
-    Function<? super T, ? extends CompletionStage<U>> fn) {
+public  CompletableFuture thenCompose(
+    Function<? super T, ? extends CompletionStage> fn) {
     return uniComposeStage(null, fn);
 }
 
-public <U> CompletableFuture<U> thenComposeAsync(
-    Function<? super T, ? extends CompletionStage<U>> fn) {
+public  CompletableFuture thenComposeAsync(
+    Function<? super T, ? extends CompletionStage> fn) {
     return uniComposeStage(defaultExecutor(), fn);
 }
 
-public <U> CompletableFuture<U> thenComposeAsync(
-    Function<? super T, ? extends CompletionStage<U>> fn,
+public  CompletableFuture thenComposeAsync(
+    Function<? super T, ? extends CompletionStage> fn,
     Executor executor) {
     return uniComposeStage(screenExecutor(executor), fn);
 } 

@@ -7,7 +7,9 @@ date: 2024-12-02 11:22:44
 updated: 2024-12-02 11:22:44  
 pdfUrl: attachments/book/横格中.pdf
 pdfTitle: 横格中
----
+---  
+
+``` sometest
 ![ly-pdf](attachments/book/横格中.pdf)
 ![ly-pdf](attachments/book/横格中.pdf)
 <a  href="/myjs/pdfjs/web/viewer.html?file=/attachments/book/横格中.pdf" target="_blank">横格中</a>  
@@ -23,3 +25,4 @@ dfdf
 ![](attachments/img/ecd-20241202113023866.svg)
 %%[🖋 Edit in Excalidraw](attachments/img/ecd-20241202113023866.md)%%  
 %%[🖋 Edit in Excalidraw](attachments/img/ecd-20241202113023866.md)%%
+```

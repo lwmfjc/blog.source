@@ -934,20 +934,20 @@ cluster 下表命令
 | 命令                            | 描述                                                         |
 | ------------------------------- | ------------------------------------------------------------ |
 | INFO                            | 返回当前集群信息                                             |
-| MEET <ip> <port> [<bus-port>]   | 添加一个节点至当前集群                                       |
+| MEET ```<ip> <port> [<bus-port>]``` | 添加一个节点至当前集群                                       |
 | MYID                            | 返回当前节点集群ID                                           |
 | NODES                           | 返回当前节点的集群信息                                       |
-| REPLICATE <node-id>             | 将当前节点作为某一集群节点的从库                             |
+| REPLICATE ```<node-id> ```       | 将当前节点作为某一集群节点的从库                             |
 | FAILOVER [FORCE\|TAKEOVER]      | 将当前从库升级为主库                                         |
 | RESET [HARD\|SOFT]              | 重置当前节点信息                                             |
-| ADDSLOTS <slot> [<slot> ...]    | 为当前集群节点增加一个或多个插槽位，推荐在bash shell中执行，可通过{int..int}指定多个插槽位 |
-| DELSLOTS <slot> [<slot> ...]    | 为当前集群节点删除一个或多个插槽位，推荐在bash shell中执行，可通过{int..int}指定多个插槽位 |
+| ADDSLOTS ```<slot> [<slot> ...] ``` | 为当前集群节点增加一个或多个插槽位，推荐在bash shell中执行，可通过{int..int}指定多个插槽位 |
+| DELSLOTS ```<slot> [<slot> ...] ``` | 为当前集群节点删除一个或多个插槽位，推荐在bash shell中执行，可通过{int..int}指定多个插槽位 |
 | FLUSHSLOTS                      | 删除当前节点中所有的插槽信息                                 |
-| FORGET <node-id>                | 从集群中删除某一节点                                         |
-| COUNT-FAILURE-REPORTS <node-id> | 返回当前集群节点的故障报告数量                               |
-| COUNTKEYSINSLOT <slot>          | 返回某一插槽中的键的数量                                     |
-| GETKEYSINSLOT <slot> <count>    | 返回当前节点存储在插槽中的key名称。                          |
-| KEYSLOT <key>                   | 返回该key的哈希槽位                                          |
+| FORGET ```<node-id>```           | 从集群中删除某一节点                                         |
+| COUNT-FAILURE-REPORTS ```<node-id>``` | 返回当前集群节点的故障报告数量                               |
+| COUNTKEYSINSLOT ```<slot>```     | 返回某一插槽中的键的数量                                     |
+| GETKEYSINSLOT ```<slot> <count>``` | 返回当前节点存储在插槽中的key名称。                          |
+| KEYSLOT ```<key>```              | 返回该key的哈希槽位                                          |
 | SAVECONFIG                      | 保存当前集群配置，进行落盘操作                               |
 | SLOTS                           | 返回该插槽的信息                                             |
 
