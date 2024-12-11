@@ -2,10 +2,9 @@
 title: rsync使用
 description: 
 categories: 
-tags: 
-published: true
-date: 2024-12-01 19:07:54 星期日
-updated: 2024-12-01 19:07:54 星期日
+tags:  
+date: 2024-12-01 19:07:54  
+updated: 2024-12-01 19:07:54  
 ---
 其实就是linux的cp功能（带增量复制）
 #推送到rsync-k40

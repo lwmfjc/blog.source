@@ -4,10 +4,9 @@ description: hugo进阶学习01-10
 categories:
   - 学习
 tags:
-  - hugo
-published: true
-date: 2024-12-07 21:17:37 星期六
-updated: 2024-12-07 21:18:20 星期六
+  - hugo 
+date: 2024-12-07 21:17:37  
+updated: 2024-12-07 21:18:20  
 ---
 > 系列视频地址介绍  
 > https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3
@@ -90,7 +89,7 @@ author: "Mike"
 放到markdown文件中（这个youtube是官方支持的内嵌的）
 ```markdown 
 {% raw %} 
-{{< youtube w7Ft2ymGmfc >}} 
+{{/*< youtube w7Ft2ymGmfc >*/}} 
 {% endraw %} 
 ```
 ## 效果  

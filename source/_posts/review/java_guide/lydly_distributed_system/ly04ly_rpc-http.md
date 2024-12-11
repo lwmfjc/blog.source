@@ -188,7 +188,7 @@ fd = socket(AF_INET,SOCK_STREAM,0);
 
 而RPC，因为它定制化程度更高，可以采用体积更小的protobuf或其他序列化协议去保存结构体数据，同时也不需要像HTTP那样考虑各种浏览器行为，比如302重定向跳转啥的。**因此性能也会更好一些，这也是在公司内部微服务中抛弃HTTP，选择使用RPC的最主要原因。**
 
-![HTTP原理](images/mypost/284c26bb7f2848889d1d9b95cf49decb%7Etplv-k3u1fbpfcp-zoom-in-crop-mark%3A4536%3A0%3A0%3A0.awebp)
+====缺一张图片====
 
 ![RPC原理](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/edb050d383c644e895e505253f1c4d90~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
 

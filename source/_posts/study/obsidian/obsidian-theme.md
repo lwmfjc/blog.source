@@ -4,10 +4,9 @@ description: obsidian-theme
 categories:
   - 学习
 tags:
-  - obsidian
-published: true
-date: 2024-12-03 15:32:01 星期二
-updated: 2024-12-03 15:32:01 星期二
+  - obsidian 
+date: 2024-12-03 15:32:01  
+updated: 2024-12-03 15:32:01  
 ---
 # 主题推荐
 1. Neumorphism-dark.json  

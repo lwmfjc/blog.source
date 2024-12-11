@@ -4,10 +4,9 @@ description: hugo进阶学习11-15
 categories:
   - 学习
 tags:
-  - hugo
-published: true
-date: 2024-12-08 11:23:42 星期日
-updated: 2024-12-08 11:23:42 星期日
+  - hugo 
+date: 2024-12-08 11:23:42  
+updated: 2024-12-08 11:23:42  
 ---
 >这里使用的版本是**v0.26**（很久之前的版本）
 

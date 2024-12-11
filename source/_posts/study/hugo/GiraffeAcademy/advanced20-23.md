@@ -4,10 +4,9 @@ description: hugo进阶学习20-23
 categories:
   - 学习
 tags:
-  - hugo
-published: true
-date: 2024-12-10 15:54:58 星期二
-updated: 2024-12-10 16:06:47 星期二
+  - hugo 
+date: 2024-12-10 15:54:58  
+updated: 2024-12-10 16:06:47  
 ---
 ![](attachments/img/ly-20241211002925293.png)  
 
@@ -104,27 +103,27 @@ color: "blue"
 ---
 
 This is A.  
-{{< myshortcode color="blue" >}}
-{{< myshortcode2 red >}}
+{{</*  myshortcode color="blue" */>}}
+{{</*  myshortcode2 red  */>}}
 
-{{< myshortcode-p >}}
+{{</*  myshortcode-p  */>}}
   This is the test inside the shortcode tags..  
 
   sdf  
   
   d---end  
-{{< /myshortcode-p >}}  
+{{</*  /myshortcode-p  */>}}  
 下面没有被渲染：  
 
-{{< myshortcode-p >}}
+{{</*  myshortcode-p  */>}}
   **bold text**
-{{< /myshortcode-p >}}
+{{</*  /myshortcode-p  */>}}
 下面被渲染了，但是没有被片段处理：  
 
-{{% myshortcode-p %}}
+{{%/* myshortcode-p  */%}}
   **bold text**xxx
-{{% /myshortcode-p %}} 
-{% endraw %} 
+{{%/* /myshortcode-p  */%}} 
+{%/* endraw */%} 
 ```
 ## 代码片段的编写
 ### 等号键值对

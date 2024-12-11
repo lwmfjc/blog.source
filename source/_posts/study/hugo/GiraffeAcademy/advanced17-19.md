@@ -4,10 +4,9 @@ description: hugo进阶学习17-19
 categories:
   - 学习
 tags:
-  - hugo
-published: true
-date: 2024-12-09 23:50:43 星期一
-updated: 2024-12-09 23:50:43 星期一
+  - hugo 
+date: 2024-12-09 23:50:43  
+updated: 2024-12-09 23:50:43  
 ---
 ![](attachments/img/ly-20241211002940460.png)  
 

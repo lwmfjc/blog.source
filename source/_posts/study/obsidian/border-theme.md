@@ -4,10 +4,9 @@ description: border-theme背景图片问题
 categories:
   - 学习
 tags:
-  - obsidian
-published: true
-date: 2024-12-04 09:10:11 星期三
-updated: 2024-12-04 09:10:11 星期三
+  - obsidian 
+date: 2024-12-04 09:10:11  
+updated: 2024-12-04 09:10:11  
 ---
 # svg格式作为背景图片（简单图片可行）
 以下面这张图片为例  
