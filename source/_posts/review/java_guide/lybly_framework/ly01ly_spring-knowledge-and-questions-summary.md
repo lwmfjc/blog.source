@@ -25,7 +25,7 @@ Spring 是一款**开源**的**轻量级 Java 开发框架**，旨在提高开�
 
 我们一般说 Spring 框架指的都是 Spring Framework，它是很**多模块的集合**，使用这些模块可以很方便地协助我们进行开发，比如说 Spring 支持 **IoC**（**Inversion of Control:控制反转**） 和 **AOP**(**Aspect-Oriented Programming:面向切面编程**)、可以很方便地**对数据库进行访问**、可以很**方便地集成第三方组件**（**电子邮件**，**任务**，**调度**，缓存等等）、对**单元测试**支持比较好、支持 **RESTful Java 应用程序**的开发。
 
-[![img](attachments/img/ly-20241129104457532.jpg)
+[![img](img/ly-20241212142008049.jpg)
 
 Spring 最核心的思想就是不重新造轮子，**开箱即用**，提高开发效率。
 
@@ -42,15 +42,15 @@ Spring 提供的核心功能主要是 **IoC** 和 **AOP**。学习 Spring ，一
 
 **Spring4.x 版本** ：
 
-![ly-20241129104458052](attachments/img/ly-20241129104458052.png)
+![ly-20241212142008316](img/ly-20241212142008316.png)
 
 **Spring5.x 版本** ：
 
-[![Spring5.x主要模块](attachments/img/ly-20241129104458457.jpg)](https://camo.githubusercontent.com/29c4744c19142975a5205c977bc6b322591549d3b80ca429655bc9cae073cc05/68747470733a2f2f67756964652d626c6f672d696d616765732e6f73732d636e2d7368656e7a68656e2e616c6979756e63732e636f6d2f6769746875622f6a61766167756964652f73797374656d2d64657369676e2f6672616d65776f726b2f737072696e672f32303230303833313137353730382e706e67)
+[![Spring5.x主要模块](img/ly-20241212142008454.jpg)](https://camo.githubusercontent.com/29c4744c19142975a5205c977bc6b322591549d3b80ca429655bc9cae073cc05/68747470733a2f2f67756964652d626c6f672d696d616765732e6f73732d636e2d7368656e7a68656e2e616c6979756e63732e636f6d2f6769746875622f6a61766167756964652f73797374656d2d64657369676e2f6672616d65776f726b2f737072696e672f32303230303833313137353730382e706e67)
 
 Spring5.x 版本中 Web 模块的 Sertlet (**应该是Servlet 吧**)组件已经被废弃掉，同时增加了用于异步响应式处理的 WebFlux 组件。
 
-Spring 各个模块的依赖关系如下： ![ly-20241129104458851](attachments/img/ly-20241129104458851.png)
+Spring 各个模块的依赖关系如下： ![ly-20241212142008595](img/ly-20241212142008595.png)
 
 #### Core Container
 
@@ -100,7 +100,7 @@ Spring 包含了多个功能模块（上面刚刚提到过），其中最重要�
 
 下图对应的是 Spring4.x 版本。目前最新的 5.x 版本中 Web 模块的 Portlet 组件已经被废弃掉，同时增加了用于异步响应式处理的 WebFlux 组件。
 
-![Spring主要模块](attachments/img/ly-20241129104459226.jpg) 
+![Spring主要模块](img/ly-20241212142008728.jpg) 
 
 Spring MVC 是 Spring 中的一个很重要的模块，主要赋予 **Spring 快速构建 MVC 架构的 Web 程序的能力**。MVC 是**模型(Model)**、**视图(View)**、**控制器(Controller)**的简写，其核心思想是通过将**业务逻辑**、**数据**、**显示**分离来组织代码。
 
@@ -123,7 +123,7 @@ Spring Boot 只是**简化了配置**，如果你需要构建 MVC 架构的 Web 
 - **控制** ：指的是**对象创建（实例化、管理）的权力**
 - **反转** ：**控制权交给外部环境**（**Spring 框架**、**IoC 容器**）
 
- ![img](attachments/img/ly-20241129104459587.jpg) 
+ ![img](img/ly-20241212142008866.jpg) 
 
 将**对象之间的相互依赖关系交给 IoC 容器**来管理，并**由 IoC 容器完成对象的注入**。这样可以很大程度上**简化**应用的开发，把应用**从复杂的依赖关系中解放**出来。 IoC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要**配置好配置文件/注解**即可，完全**不用考虑**对象是**如何被创建**出来的。
 
@@ -349,8 +349,8 @@ public Person personPrototype() {
 
 与之比较类似的中文版本:
 
-[![Spring Bean 生命周期](attachments/img/ly-20241129104459925.jpg)](https://camo.githubusercontent.com/9efd4a1a6c11ebb15c61a022e93bb20934a85a72d95194cf59402421c09191a9/68747470733a2f2f696d616765732e7869616f7a6875616e6c616e2e636f6d2f70686f746f2f323031392f62356432363435363536353761353339356332373831303831613734383365312e6a7067)
-![image.png](attachments/img/ly-20241129104500275.png)
+[![Spring Bean 生命周期](img/ly-20241212142009004.jpg)](https://camo.githubusercontent.com/9efd4a1a6c11ebb15c61a022e93bb20934a85a72d95194cf59402421c09191a9/68747470733a2f2f696d616765732e7869616f7a6875616e6c616e2e636f6d2f70686f746f2f323031392f62356432363435363536353761353339356332373831303831613734383365312e6a7067)
+![image.png](img/ly-20241212142009137.png)
 
 
 ## Spring AoP
@@ -365,7 +365,7 @@ AOP(**Aspect-Oriented Programming:面向切面编程**)能够将那些与业务�
 
 Spring AOP 就是**基于动态代理**的，如果要代理的对象，实现了某个接口，那么 Spring AOP 会使用 **JDK Proxy**，去**创建代理对象**，而对于没有实现接口的对象，就无法使用 JDK Proxy 去进行代理了，这时候 Spring AOP 会使用 **Cglib** 生成一个**被代理对象的子类**来作为代理，如下图所示：
 
-  ![ly-20241129104500652](attachments/img/ly-20241129104500652.png)
+  ![ly-20241212142009269](img/ly-20241212142009269.png)
 
 当然你也可以使用 **AspectJ** ！Spring AOP 已经集成了 AspectJ ，**AspectJ** 应该算的上是 **Java 生态系统中最完整的 AOP 框架**了。
 
@@ -432,11 +432,11 @@ public class LoggingAspect implements Ordered {
 
 MVC 是**模型(Model)**、**视图(View)**、**控制器(Controller)**的简写，其核心思想是通过将**业务逻辑**、**数据**、**显示**分离来组织代码。
 
- ![img](attachments/img/ly-20241129104501024.jpg) 
+ ![img](img/ly-20241212142009406.jpg) 
 
 网上有很多人说 MVC 不是设计模式，只是软件设计规范，我个人更倾向于 **MVC 同样是众多设计模式中的一种**。**[java-design-patterns](https://github.com/iluwatar/java-design-patterns)** 项目中就有关于 MVC 的相关介绍。
 
- ![img](attachments/img/ly-20241129104501417.jpg) 
+ ![img](img/ly-20241212142009544.jpg) 
 
 想要真正理解 Spring MVC，我们先来看看 Model 1 和 Model 2 这两个没有 Spring MVC 的时代。
 
@@ -456,7 +456,7 @@ MVC 是**模型(Model)**、**视图(View)**、**控制器(Controller)**的简写
 - View：**展示模型中的数据**，只是用来展示。
 - Controller：**处理用户请求**都发送给 **Servlet**，返回数据给 JSP 并展示给用户。
 
-[![img](attachments/img/ly-20241129104501833.jpg)](https://camo.githubusercontent.com/b36a90d56dae552146126cf76f8de218f5d545d9df9d65a7eb84283157f46475/68747470733a2f2f67756964652d626c6f672d696d616765732e6f73732d636e2d7368656e7a68656e2e616c6979756e63732e636f6d2f6a6176612d67756964652d626c6f672f6d76632d6d6f64656c322e706e67)
+[![img](img/ly-20241212142009678.jpg)](https://camo.githubusercontent.com/b36a90d56dae552146126cf76f8de218f5d545d9df9d65a7eb84283157f46475/68747470733a2f2f67756964652d626c6f672d696d616765732e6f73732d636e2d7368656e7a68656e2e616c6979756e63732e636f6d2f6a6176612d67756964652d626c6f672f6d76632d6d6f64656c322e706e67)
 
 Model2 模式下还存在很多问题，**Model2 的抽象**和**封装程度**还远远不够，使用 Model2 进行开发时不可避免地会**重复造轮子**，这就大大降低了程序的**可维护性**和**复用性**。
 
@@ -484,7 +484,7 @@ MVC 是一种设计模式，Spring MVC 是一款很优秀的 MVC 框架。Spring
 
 > SpringMVC 工作原理的图解我没有自己画，直接图省事在网上找了一个非常清晰直观的，原出处不明。
 
-![img](attachments/img/ly-20241129104502219.jpg) 
+![img](img/ly-20241212142009812.jpg) 
 
 **流程说明（重要）：**
 
@@ -495,7 +495,7 @@ MVC 是一种设计模式，Spring MVC 是一款很优秀的 MVC 框架。Spring
 5. `ViewResolver` 会**根据逻辑 `View` 查找实际的 `View`**。
 6. `DispaterServlet` 把**返回的 `Model` 传给 `View`（视图渲染**）。
 7. 把 **`View` 返回**给请求者（浏览器）  
-![image.png](attachments/img/ly-20241129104502659.png)
+![image.png](img/ly-20241212142009954.png)
 
 
 ### 统一异常处理怎么做？
@@ -845,7 +845,7 @@ public class UserServiceImpl implements UserService {
 - **`TransactionDefinition.PROPAGATION_SUPPORTS`**: 如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。
 - **`TransactionDefinition.PROPAGATION_NOT_SUPPORTED`**: 以非事务方式运行，如果当前存在事务，则把当前事务挂起。
 - **`TransactionDefinition.PROPAGATION_NEVER`**: 以非事务方式运行，如果当前存在事务，则抛出异常。
-![image.png](attachments/img/ly-20241129104503054.png)
+![image.png](img/ly-20241212142010090.png)
 
 ### Spring 事务中的隔离级别有哪几种?
 
@@ -1021,7 +1021,7 @@ Spring Security 重要的是实战，这里仅对小部分知识点进行总结�
 
 ### 有哪些控制请求访问权限的方法？
 
-![ly-20241129104503399.png](attachments/img/ly-20241129104503399.png)
+![ly-20241212142010222.png](img/ly-20241212142010222.png)
 
 
 - `permitAll()` ：无条件允许任何形式访问，不管你登录还是没有登录。
@@ -1060,7 +1060,7 @@ public interface PasswordEncoder {
 }
 ```
 
-![ly-20241129104503754.png](attachments/img/ly-20241129104503754.png)
+![ly-20241212142010354.png](img/ly-20241212142010354.png)
 
 
 官方推荐使用基于 bcrypt 强哈希函数的加密算法实现类。

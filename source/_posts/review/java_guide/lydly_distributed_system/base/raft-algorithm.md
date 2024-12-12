@@ -37,7 +37,7 @@ updated: 2023-02-10 17:10:36
 
 共识算法允许一组节点像一个整体一样一起工作，即使其中的一些节点出现故障也能够继续工作下去，其正确性主要是源于复制状态机的性质：一组`Server`的状态机计算相同状态的副本，即使有一部分的`Server`宕机了它们仍然能够继续运行。
 
-![rsm-architecture.png](attachments/img/ly-20241129104546182.jpg) 
+![rsm-architecture.png](img/ly-20241212142028468.jpg) 
 
 ```
 图-1 复制状态机架构
@@ -66,7 +66,7 @@ updated: 2023-02-10 17:10:36
 
 在正常的情况下，只有一个服务器是 Leader，剩下的服务器是 Follower。Follower 是被动的，它们不会发送任何请求，只是响应来自 Leader 和 Candidate 的请求。
 
-![img](attachments/img/ly-20241129104546644.jpg)
+![img](img/ly-20241212142028721.jpg)
 
 ```
 图-2：服务器的状态
@@ -74,7 +74,7 @@ updated: 2023-02-10 17:10:36
 
 ### 2.2 任期
 
-![img](attachments/img/ly-20241129104546979.jpg)
+![img](img/ly-20241212142028843.jpg)
 
 ```
 图-3：任期

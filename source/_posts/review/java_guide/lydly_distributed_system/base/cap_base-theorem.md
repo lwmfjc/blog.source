@@ -33,7 +33,7 @@ updated: 2023-02-10 15:03:48
 
 **CAP** 也就是 **Consistency（一致性）**、**Availability（可用性）**、**Partition Tolerance（分区容错性）** 这三个单词首字母组合。
 
-![ly-20241129104543919](attachments/img/ly-20241129104543919.png)
+![ly-20241212142027432](img/ly-20241212142027432.png)
 
 CAP 理论的提出者布鲁尔在提出 CAP 猜想的时候，并没有详细定义 **Consistency**、**Availability**、**Partition Tolerance** 三个单词的明确定义。
 
@@ -49,7 +49,7 @@ CAP 理论的提出者布鲁尔在提出 CAP 猜想的时候，并没有详细�
 
 分布式系统中，多个节点之前的网络本来是连通的，但是因为某些故障（比如**部分节点网络出了问题**）某些节点之间不连通了，整个网络就分成了几块区域，这就叫 **网络分区**。
 
-![partition-tolerance](attachments/img/ly-20241129104544354.jpg) 
+![partition-tolerance](img/ly-20241212142027686.jpg) 
 
 ### 不是所谓的“3 选 2”
 
@@ -76,7 +76,7 @@ CAP 理论的提出者布鲁尔在提出 CAP 猜想的时候，并没有详细�
 
 注册中心负责**服务地址的注册与查找**，相当于目录服务，**服务提供者**和**消费者**只在**启动时与注册中心交互**，注册中心不转发请求，压力较小。
 
-![img](attachments/img/ly-20241129104544698.jpg)](https://camo.gith
+![img](img/ly-20241212142027810.jpg)](https://camo.gith
 
 常见的可以作为注册中心的组件有：ZooKeeper、Eureka、Nacos...。
 
@@ -126,7 +126,7 @@ CAP 理论这节我们也说过了：
 
 ### BASE 理论三要素
 
- ![ly-20241129104545033.png](attachments/img/ly-20241129104545033.png)
+ ![ly-20241212142027939.png](img/ly-20241212142027939.png)
 
 
 #### 基本可用

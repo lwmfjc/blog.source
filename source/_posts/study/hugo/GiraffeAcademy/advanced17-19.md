@@ -8,11 +8,11 @@ tags:
 date: 2024-12-09 23:50:43  
 updated: 2024-12-09 23:50:43  
 ---
-![](attachments/img/ly-20241211002940460.png)  
+![](img/ly-20241212142130125.png)  
 
 # Variable
 ## 文件结构
-![](attachments/img/ly-20241210141931324.png)  
+![](img/ly-20241212142130325.png)  
 ## 实战
 ```go 
 {% raw %} 
@@ -47,7 +47,7 @@ This is dir3/e.md
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210144019859.png)  
+![](img/ly-20241212142130338.png)  
 
 其他两个文件效果  
 ``` markdown 
@@ -63,7 +63,7 @@ This is dir3/f.md
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210144426903.png)  
+![](img/ly-20241212142130422.png)  
 
 ``` markdown 
 {% raw %} 
@@ -80,7 +80,7 @@ This is A,/a.
 ```
 
 效果：  
-![](attachments/img/ly-20241210144448146.png)  
+![](img/ly-20241212142130499.png)  
 
 ## 官网详细默认变量
 
@@ -88,7 +88,7 @@ This is A,/a.
 
 # Functions函数
 ## 文件结构
-![](attachments/img/ly-20241210141931324.png)  
+![](img/ly-20241212142130575.png)  
 
 ## 代码(模板)
 注意，下面全是dir1下的模板，只对/dir1/及其下文件有效  
@@ -172,7 +172,7 @@ single.html
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210151809812.png)
+![](img/ly-20241212142130591.png)
 
 list.html  
 ``` 
@@ -188,11 +188,11 @@ list.html
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210151744421.png)  
+![](img/ly-20241212142130667.png)  
 
 # IfStatements
 ## 文件结构
-![](attachments/img/ly-20241210141931324.png)  
+![](img/ly-20241212142130741.png)  
 
 ## if代码演示
 ```html 
@@ -224,7 +224,7 @@ list.html
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210153953444.png)  
+![](img/ly-20241212142130757.png)  
 
 ## 其他代码展示
 ``` html 
@@ -250,5 +250,5 @@ list.html
 {% endraw %} 
 ```
   
-![](attachments/img/ly-20241210155405613.png)  
+![](img/ly-20241212142130838.png)  
 

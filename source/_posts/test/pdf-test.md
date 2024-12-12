@@ -22,7 +22,7 @@ pdfTitle: 横格中
 ------  
 
 dfdf
-![](attachments/img/ecd-20241202113023866.svg)
-%%[🖋 Edit in Excalidraw](attachments/img/ecd-20241202113023866.md)%%  
-%%[🖋 Edit in Excalidraw](attachments/img/ecd-20241202113023866.md)%%
+![](img/ecd-20241202113023866.svg)
+%%[🖋 Edit in Excalidraw](img/ecd-20241202113023866.md)%%  
+%%[🖋 Edit in Excalidraw](img/ecd-20241202113023866.md)%%
 ```

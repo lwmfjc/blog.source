@@ -17,14 +17,14 @@ updated: 2022-11-07 16:00:06
 ## JMM（JavaMemoryModel)
 
 [详见-知识点](/2022/11/21/review/java_guide/java/concurrent/jmm)
-![Java内存模型](attachments/img/ly-20241129104340768.png)
+![Java内存模型](img/ly-20241212141935173.png)
 
 ## volatile关键字
 
 - 保证变量可见性
 
   - 使用volatile关键字保证变量可见性，如果将变量声明为volatile则**指示JVM该变量是共享且不稳定**的，每次使用它都到**主存**中读取  
-    ![ly-20241129104341391](attachments/img/ly-20241129104341391.png)
+    ![ly-20241212141935463](img/ly-20241212141935463.png)
     
     > volatile关键字并非Java语言特有，在C语言里也有，它最原始的意义就是**禁用CPU缓存**。
     
@@ -330,9 +330,9 @@ updated: 2022-11-07 16:00:06
     > 
     
       执行monitorenter时，**尝试获取**对象的锁，如果锁计数器为0则表示所可以被获取，获取后锁计数器设为1，简单的流程  
-    ![ly-20241129104341743](attachments/img/ly-20241129104341743.png)
+    ![ly-20241212141935625](img/ly-20241212141935625.png)
       **只有拥有者线程**才能执行**monitorexit**来释放锁，执行monitorexit指令后，锁计数器设为0（应该是**减一**，与可重入锁有关），当计数器为0时，表明锁被释放，其他线程可以**尝试获得锁**(如果某个线程获取锁失败，那么该线程就会阻塞等待，直到锁被（另一个线程）释放)
-      ![ly-20241129104342079](attachments/img/ly-20241129104342079.png)
+      ![ly-20241212141935777](img/ly-20241212141935777.png)
     
   - synchronized修饰方法
   
@@ -345,10 +345,10 @@ updated: 2022-11-07 16:00:06
     ```
   
     如图  :
-    ![ly-20241129104342484](attachments/img/ly-20241129104342484.png)
+    ![ly-20241212141935933](img/ly-20241212141935933.png)
   
     对比（下面是对synchronized代码块）：  
-    ![ly-20241129104342809](attachments/img/ly-20241129104342809.png)
+    ![ly-20241212141936089](img/ly-20241212141936089.png)
   
     > synchronized修饰的方法没有monitorenter和monitorexit指令，而是**ACC_SYNCHRONIZED**标识（flags），该标识**指明方法是一个同步方法**（JVM通过访问标志判断方法是否声明为同步方法），从而执行同步调用
     > 如果是**实例方法**，JVM 会尝试**获取实例对象的锁**。如果是**静态方法**，JVM 会尝试**获取当前 class 的锁**。
@@ -416,7 +416,7 @@ updated: 2022-11-07 16:00:06
   3. 对于ThreadLocal变量，**访问这个变量的每个线程**都会**有这个变量的本地副本**。使用get()和set()来获取默认值或将其值**更改为当前线程所存的副本的值**
 
 - 如图  
-  ![ly-20241129104343145](attachments/img/ly-20241129104343145.png)
+  ![ly-20241212141936240](img/ly-20241212141936240.png)
 
 - 如何使用ThreadLocal
   Demo演示实际中如何使用ThreadLocal  
@@ -600,10 +600,10 @@ updated: 2022-11-07 16:00:06
            **比如我们在同一个线程中声明了两个 `ThreadLocal` 对象的话， `Thread`内部都是使用仅有的那个`ThreadLocalMap` 存放数据的，`ThreadLocalMap`的 key 就是 `ThreadLocal`对象，value 就是 `ThreadLocal` 对象调用`set`方法设置的值**
          
       2. ThreadLocal数据结构如下图所示
-         ![ly-20241129104343496](attachments/img/ly-20241129104343496.png)
+         ![ly-20241212141936391](img/ly-20241212141936391.png)
       
          **`ThreadLocalMap`是`ThreadLocal`的静态内部类。**
-         ![ly-20241129104343879](attachments/img/ly-20241129104343879.png)
+         ![ly-20241212141936552](img/ly-20241212141936552.png)
   
 - ThreadLocal内存泄露问题时怎么导致的
 

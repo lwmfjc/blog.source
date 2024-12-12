@@ -15,7 +15,7 @@ updated: 2023-02-17 17:28:30
 
 前段时间重读了[《重构：改善代码既有设计》](https://book.douban.com/subject/30468597/)，收货颇多。于是，简单写了一篇文章来聊聊我对重构的看法。
 
- ![img](attachments/img/ly-20241129104518411.jpg)
+ ![img](img/ly-20241212142016683.jpg)
 
 ## 何谓重构？
 
@@ -32,13 +32,13 @@ updated: 2023-02-17 17:28:30
 
 **常见的设计模式如下** ：
 
- ![img](attachments/img/ly-20241129104518862.jpg)
+ ![img](img/ly-20241212142016942.jpg)
 
 更全面的设计模式总结，可以看 **[java-design-patterns](https://github.com/iluwatar/java-design-patterns)** 这个开源项目。
 
 **常见的软件设计原则如下** ：
 
- ![img](attachments/img/ly-20241129104519200.jpg)
+ ![img](img/ly-20241212142017073.jpg)
 
 更全面的设计原则总结，可以看 **[java-design-patterns](https://github.com/iluwatar/java-design-patterns)** 和 **[hacker-laws-zh](https://github.com/nusr/hacker-laws-zh)** 这两个开源项目。
 
@@ -58,7 +58,7 @@ updated: 2023-02-17 17:28:30
 
 重构并不会减慢软件开发速度，相反，如果代码质量和软件设计较差，当我们想要添加新功能的话，开发速度会越来越慢。到了最后，甚至都有想要重写整个系统的冲动。
 
-[![img](attachments/img/ly-20241129104519536.jpg) 
+[![img](img/ly-20241212142017203.jpg) 
 
 《重构：改善代码既有设计》这本书中这样说：
 
@@ -88,7 +88,7 @@ updated: 2023-02-17 17:28:30
 
 有一个两顶帽子的比喻：在我开发新功能之前，我发现**重构可以让新功能的开发更容易**，于是我戴上了重构的帽子。重构之后，我换回原来的帽子，继续开发新能功能。新功能开发完成之后，我又发现自己的代码难以理解，于是我又戴上了重构帽子。比较好的开发状态就是就是这样在**重构和开发新功能之间来回切换**。
 
- ![refractor-two-hats](attachments/img/ly-20241129104519868.jpg) 
+ ![refractor-two-hats](img/ly-20241212142017337.jpg) 
 
 ### Code Review 之后
 

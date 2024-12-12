@@ -1260,7 +1260,7 @@ SQL 允许在 `JOIN` 左边加上一些修饰性的关键词，从而形成不�
 
 下图展示了 LEFT JOIN、RIGHT JOIN、INNER JOIN、OUTER JOIN 相关的 7 种用法。
 
-![ly-20241129104212776](attachments/img/ly-20241129104212776.png)
+![ly-20241212141857180](img/ly-20241212141857180.png)
 
 如果不加任何修饰词，只写 `JOIN`，那么默认为 `INNER JOIN`
 

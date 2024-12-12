@@ -8,7 +8,7 @@ tags:
 date: 2024-12-10 15:54:58  
 updated: 2024-12-10 16:06:47  
 ---
-![](attachments/img/ly-20241211002925293.png)  
+![](img/ly-20241212142130925.png)  
 
 # DateFiles
 ```json  
@@ -42,7 +42,7 @@ updated: 2024-12-10 16:06:47
 {% endraw %} 
 ```
 
-![](attachments/img/ly-20241210164617330.png)  
+![](img/ly-20241212142131035.png)  
 # PartialTemplates
 ## 传递全局范围
 ``` html 
@@ -64,7 +64,7 @@ updated: 2024-12-10 16:06:47
 {% endraw %} 
 ```
 预览：  
-![](attachments/img/ly-20241210165423667.png)  
+![](img/ly-20241212142131117.png)  
 
 ## 传递字典
 ``` html 
@@ -85,11 +85,11 @@ updated: 2024-12-10 16:06:47
 ```
 
 效果：  
-![](attachments/img/ly-20241210170803404.png)  
+![](img/ly-20241212142131191.png)  
 
 # ShortCodeTemplate
 ## 效果图
-![](attachments/img/ly-20241210173108285.png)  
+![](img/ly-20241212142131266.png)  
 ## 记得先在a相关的template把 .Content 补上
 ## 代码片段的使用
 ``` markdown 
@@ -151,6 +151,6 @@ This is A.
 # 如何构建网站及托管
 
 1. 使用```hugo server```运行并打开网站（平常测试）
-2. 使用```hugo```生成静态网页文件夹```/public/``` ![](attachments/img/ly-20241210175221253.png) 
+2. 使用```hugo```生成静态网页文件夹```/public/``` ![](img/ly-20241212142131339.png) 
 3. 把上面的/public/下的所有文件传到网络服务器即可
 4. 进行第三步之前，得先把原先传到网络服务器上的```/public/```的内容清空

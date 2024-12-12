@@ -13,17 +13,17 @@ updated: 2022-04-08 20:00:03
 
 ## 架构
 
-![ly-20241129105122715](attachments/img/ly-20241129105122715.png)
+![ly-20241212142200977](img/ly-20241212142200977.png)
 
 ## 流程图
 
 ### 下单流程
 
-![ly-20241129105123170](attachments/img/ly-20241129105123170.png)
+![ly-20241212142201029](img/ly-20241212142201029.png)
 
 ### 支付流程
 
-![ly-20241129105123556](attachments/img/ly-20241129105123556.png)
+![ly-20241212142201068](img/ly-20241212142201068.png)
 
 # SpringBoot整合RocketMQ
 
@@ -94,7 +94,7 @@ public class Consumer implements RocketMQListener<String> {
 
 # 下单流程利用MQ进行回退处理，保证数据一致性
 
-![ly-20241129105123892](attachments/img/ly-20241129105123892.png)
+![ly-20241212142201106](img/ly-20241212142201106.png)
 
 库存回退的消费者，代码如下：  
 

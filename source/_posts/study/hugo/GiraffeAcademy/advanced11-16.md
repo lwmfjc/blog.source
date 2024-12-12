@@ -10,31 +10,31 @@ updated: 2024-12-08 11:23:42
 ---
 >这里使用的版本是**v0.26**（很久之前的版本）
 
-![](attachments/img/ly-20241211002948394.png)  
+![](img/ly-20241212142128138.png)  
 
 # template basic
 模板分为list template和single template  
 ## 文件夹结构
 content目录结构  
-![](attachments/img/ly-20241208180244621.png)
+![](img/ly-20241212142128249.png)
 ## list template （列表模板）  
-![](attachments/img/ly-20241208115539651.png)  
+![](img/ly-20241212142128336.png)  
   
-  ![](attachments/img/ly-20241208115627708.png)
+  ![](img/ly-20241212142128415.png)
 ## single template （单页模板）
-![](attachments/img/ly-20241208115455162.png)  
+![](img/ly-20241212142128493.png)  
 ## 特点
 所有的**列表之间**都是长一样的（页眉，页脚，及内容（都是列表））  
 所有的**单页之间**都是长一样的（一样的页眉页脚，一样的内容布局）  
 ## 部分代码解释
-![](attachments/img/ly-20241208120456973.png)  
+![](img/ly-20241212142128574.png)  
 ### 单页探索
-![](attachments/img/ly-20241208120836428.png)  
-![](attachments/img/ly-20241208120735767.png)  
+![](img/ly-20241212142128655.png)  
+![](img/ly-20241212142128733.png)  
 
 # list page templates
 ## 文件夹结构
-![](attachments/img/ly-20241208180521240.png)  
+![](img/ly-20241212142128811.png)  
 ## 文件内容
 ```toml 
 #content/_index
@@ -51,9 +51,9 @@ title: "_Index"
 This is the landing page for dir1
 ```
 ## 当前效果  
-![](attachments/img/ly-20241208180816608.png)  
+![](img/ly-20241212142128890.png)  
 
-![](attachments/img/ly-20241208180907481.png)  
+![](img/ly-20241212142129003.png)  
 
 ## 原因 
 ```html 
@@ -117,12 +117,12 @@ This is the landing page for dir1
 ```
 ## 效果
 list template简易版  
-![](attachments/img/ly-20241208181937373.png)  
+![](img/ly-20241212142129082.png)  
 
-![](attachments/img/ly-20241208182033315.png)  
+![](img/ly-20241212142129160.png)  
 # single template
 ## 当前效果  
-![](attachments/img/ly-20241209143458788.png)  
+![](img/ly-20241212142129239.png)  
 ## 主题默认代码
 ``` html 
 {% raw %} 
@@ -170,16 +170,16 @@ list template简易版
 {% endraw %} 
 ```
 效果  
-![](attachments/img/ly-20241209143751946.png)  
+![](img/ly-20241212142129314.png)  
 # home template
 ## 是什么
 - 前面学到，页面分为“列表页面list page”和“单页页面”。其实再细分还有一种“主页页面home page”。
 - 主页，即 ```localhost:1313``` 是先使用homepage，找不到的情况，才会使用list page
 ## 目录结构
-![](attachments/img/ly-20241209172617434.png)  
+![](img/ly-20241212142129391.png)  
 ## 当前效果
 
-![](attachments/img/ly-20241209172955608.png)  
+![](img/ly-20241212142129408.png)  
 ## 修改文件代码
 ```html 
 {% raw %} 
@@ -187,12 +187,12 @@ list template简易版
 Home Page Template 
 {% endraw %} 
 ```
-![](attachments/img/ly-20241209173301572.png)  
+![](img/ly-20241212142129484.png)  
 ## 效果
-![](attachments/img/ly-20241209173414623.png)  
+![](img/ly-20241212142129564.png)  
 # SectionTemplate
 ## 当前目录结构
-![](attachments/img/ly-20241209172617434.png)  
+![](img/ly-20241212142129641.png)  
 ## 目的
 不用理会a.md使用哪个当single template。而dir1文件夹下的所有md，都是用同一个single template。  
 目前content下所有md文件详情：a.md使用layouts/index.html当模板（没有的话则找layouts```/_default/index.html```当模板）。b.md和c.md、e.md、d.md、f.md均使用```layouts/_default/index.html```当模板  
@@ -219,12 +219,12 @@ Home Page Template
 {% endraw %} 
 ```
 ## 结果
-![](attachments/img/ly-20241209190702425.png)  
+![](img/ly-20241212142129656.png)  
 
-![](attachments/img/ly-20241209190720396.png)  
+![](img/ly-20241212142129733.png)  
 
 其他的走默认模板  ```layouts\_default\single.html```  
-![](attachments/img/ly-20241209190743446.png)  
+![](img/ly-20241212142129811.png)  
 
 # Base Templates && Blocks Hugo
 
@@ -232,7 +232,7 @@ Home Page Template
 BaseTemplate就是这个网站的总体模板
 ## 案例
 ### 目录结构
-![](attachments/img/ly-20241209211724506.png)  
+![](img/ly-20241212142129887.png)  
 ### 编辑文件
 baseof.html  
 ``` html 
@@ -273,6 +273,6 @@ list.html
 {% endraw %} 
 ```
 效果  
-![](attachments/img/ly-20241209234906571.png)  
-![](attachments/img/ly-20241209234923287.png)  
+![](img/ly-20241212142129961.png)  
+![](img/ly-20241212142130037.png)  
 
